@@ -26,7 +26,7 @@ export const projects = [
       "Database",
       "Analysis"
     ],
-    screenshot: ecommerceDashboard,
+    screenshot: null,
     screenshotCaption: "Power BI Executive Sales Performance & Insights Dashboard"
   },
   {
