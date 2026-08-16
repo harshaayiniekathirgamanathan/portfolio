@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Database, Mail, Sparkles, Terminal, Cpu, Workflow } from 'lucide-react';
+import { ArrowRight, Database, Mail, Terminal, Cpu, Workflow, Download, Phone } from 'lucide-react';
 import { personalInfo } from '../data/personalInfo';
 import profilePhoto from '../assets/profile-photo.jpg';
 import { LinkedinIcon, GithubIcon } from './Icons';
@@ -47,16 +47,16 @@ export default function Hero() {
               <p className="font-medium text-slate-200">
                 {personalInfo.heroSubtitle}
               </p>
-              <p className="text-sm sm:text-base text-slate-400 flex items-center gap-2 font-mono">
-                <Workflow className="w-4 h-4 text-[#22D3EE] shrink-0" />
+              <p className="text-sm sm:text-base text-slate-400 flex items-start gap-2 font-mono">
+                <Workflow className="w-4 h-4 text-[#22D3EE] shrink-0 mt-1" />
                 <span>{personalInfo.heroSecondaryLine}</span>
               </p>
             </div>
 
             {/* Clean Supporting Areas Tags */}
             <div className="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
-              <span className="px-3.5 py-1.5 rounded-lg bg-cyan-950/60 border border-cyan-500/40 text-[#22D3EE] font-semibold flex items-center gap-1.5">
-                <Database className="w-3.5 h-3.5" />
+              <span className="px-3.5 py-1.5 rounded-lg bg-cyan-950/60 border border-cyan-500/40 text-[#22D3EE] font-semibold flex items-center gap-1.5 shadow-sm">
+                <Database className="w-3.5 h-3.5 text-cyan-400" />
                 Data Engineering
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-400">
@@ -67,28 +67,29 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons: View Projects & Download CV */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <a
                 href="#projects"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#4F7CFF] to-[#22D3EE] text-slate-950 font-bold text-sm hover:opacity-95 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5"
               >
-                <span>Explore My Projects</span>
+                <span>View Projects</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
-                href={personalInfo.links.linkedin}
+                href={personalInfo.links.cvPath}
+                download="Harshaayinie-K-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/90 text-slate-200 font-semibold text-sm hover:text-white border border-slate-700 hover:border-cyan-500/50 hover:bg-slate-800 transition-all shadow-md hover:-translate-y-0.5"
               >
-                <LinkedinIcon className="w-4 h-4 text-[#22D3EE]" />
-                <span>Let's Connect</span>
+                <Download className="w-4 h-4 text-[#22D3EE]" />
+                <span>Download CV</span>
               </a>
             </div>
 
-            {/* Direct Links */}
+            {/* Direct Social & Contact Links */}
             <div className="pt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
               <a 
                 href={personalInfo.links.linkedin} 
@@ -96,7 +97,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 hover:text-[#22D3EE] transition-colors"
               >
-                <LinkedinIcon className="w-3.5 h-3.5" />
+                <LinkedinIcon className="w-3.5 h-3.5 text-[#22D3EE]" />
                 <span>LinkedIn</span>
               </a>
               <span className="text-slate-700">•</span>
@@ -106,7 +107,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 hover:text-[#22D3EE] transition-colors"
               >
-                <GithubIcon className="w-3.5 h-3.5" />
+                <GithubIcon className="w-3.5 h-3.5 text-[#22D3EE]" />
                 <span>GitHub</span>
               </a>
               <span className="text-slate-700">•</span>
@@ -121,7 +122,7 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: Hero Visual with Real Uploaded Photo */}
+          {/* Right Column: Hero Visual with Uploaded Photo */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[320px] mx-auto lg:mr-4">
               
@@ -131,7 +132,7 @@ export default function Hero() {
               {/* Image Card Frame */}
               <div className="relative rounded-2xl bg-[#111827]/90 p-3 border border-cyan-500/30 shadow-2xl shadow-cyan-950/50 backdrop-blur-md">
                 
-                {/* Photo container with exact aspect ratio & thin glow border */}
+                {/* Photo container */}
                 <div className="relative rounded-xl overflow-hidden aspect-[4/5] max-h-[380px] w-full border border-slate-700/80 group">
                   <img
                     src={profilePhoto}
@@ -139,7 +140,7 @@ export default function Hero() {
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   
-                  {/* Subtle Gradient Overlay at Bottom */}
+                  {/* Subtle Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/80 via-transparent to-transparent opacity-50" />
                 </div>
 

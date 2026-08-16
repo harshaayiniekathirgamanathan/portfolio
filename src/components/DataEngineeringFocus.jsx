@@ -1,6 +1,7 @@
 import React from 'react';
 import { GitFork, Cpu, Database, BarChart3, ArrowRight, Layers, Workflow } from 'lucide-react';
 import { focusAreas } from '../data/personalInfo';
+import CurrentlyLearning from './CurrentlyLearning';
 
 const iconMap = {
   GitFork: GitFork,
@@ -21,7 +22,7 @@ export default function DataEngineeringFocus() {
             <span>Core Pillars</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-            My <span className="text-gradient-de">Data Engineering Focus</span>
+            Data Engineering <span className="text-gradient-de">Focus</span>
           </h2>
           <p className="max-w-2xl mx-auto text-slate-400 text-sm sm:text-base">
             Key areas where I am actively building practical skills as an Information Technology undergraduate.
@@ -29,7 +30,7 @@ export default function DataEngineeringFocus() {
         </div>
 
         {/* Focus Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {focusAreas.map((area, idx) => {
             const IconComponent = iconMap[area.icon] || Database;
             const isCore = area.tag === 'Core Focus';
@@ -81,6 +82,9 @@ export default function DataEngineeringFocus() {
             );
           })}
         </div>
+
+        {/* Currently Learning Section Component */}
+        <CurrentlyLearning />
 
       </div>
     </section>

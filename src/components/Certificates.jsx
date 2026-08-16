@@ -17,7 +17,7 @@ export default function Certificates() {
             <span>Continuous Learning</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-            Certifications & <span className="text-gradient">Learning</span>
+            <span className="text-gradient">Certifications</span>
           </h2>
           <p className="max-w-2xl mx-auto text-slate-400 text-sm sm:text-base">
             Formal credentials and academic certificates verifying technical foundational knowledge.

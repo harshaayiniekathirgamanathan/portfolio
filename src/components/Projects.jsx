@@ -83,6 +83,28 @@ export default function Projects() {
                 </div>
               )}
 
+              {/* Power BI Dashboard Screenshot */}
+              {featuredProject.screenshot && (
+                <div className="mb-8 rounded-2xl overflow-hidden border border-cyan-500/30 bg-[#0B1120] shadow-2xl">
+                  <div className="px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+                    <span className="text-xs font-mono text-cyan-300 font-semibold flex items-center gap-2">
+                      <Sparkles className="w-3.5 h-3.5 text-[#22D3EE]" />
+                      {featuredProject.screenshotCaption}
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400 bg-cyan-950 px-2 py-0.5 rounded border border-cyan-800">
+                      Power BI Dashboard
+                    </span>
+                  </div>
+                  <div className="relative group max-h-[420px] overflow-hidden">
+                    <img
+                      src={featuredProject.screenshot}
+                      alt="E-commerce Sales Dashboard Screenshot"
+                      className="w-full h-auto object-cover object-top group-hover:scale-102 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* Highlights & Key Features */}
               <div className="mb-8">
                 <h4 className="text-xs font-mono text-slate-400 font-bold uppercase tracking-wider mb-3">

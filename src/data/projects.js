@@ -1,3 +1,5 @@
+import ecommerceDashboard from '../assets/projects/ecommerce-dashboard.png';
+
 export const projects = [
   {
     id: "ecommerce-etl",
@@ -17,18 +19,20 @@ export const projects = [
     ],
     technologies: ["Python", "Pandas", "SQL", "PostgreSQL", "Power BI", "Git & GitHub"],
     pipelineFlow: [
-      "Raw Sales Data",
-      "Data Cleaning & Transformation",
-      "Processed Sales Data",
-      "SQL Analysis",
-      "Power BI Dashboard",
-      "Business Insights"
-    ]
+      "Source Data",
+      "Extract",
+      "Transform",
+      "Load",
+      "Database",
+      "Analysis"
+    ],
+    screenshot: ecommerceDashboard,
+    screenshotCaption: "Power BI Executive Sales Performance & Insights Dashboard"
   },
   {
     id: "task-management",
     title: "Task Management System",
-    badge: "Web Development",
+    badge: "Full-Stack Web Development",
     status: "Completed",
     isFeatured: false,
     github: "https://github.com/harshaayiniekathirgamanathan/Task-Management-Web-Project.git",
@@ -42,7 +46,8 @@ export const projects = [
       "Deployed frontend client seamlessly to Azure Static Web Apps."
     ],
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "REST APIs", "Azure Static Web Apps"],
-    pipelineFlow: null
+    pipelineFlow: null,
+    screenshot: null
   },
   {
     id: "ai-healthcare-platform",
@@ -61,11 +66,12 @@ export const projects = [
     ],
     technologies: ["Python", "ETL Pipeline", "PostgreSQL", "SQL", "Power BI", "Machine Learning"],
     pipelineFlow: [
-      "Healthcare Datasets (CSV)",
-      "Python ETL Pipeline (Extract, Clean, Transform, Merge)",
-      "PostgreSQL DB (Patients, Diabetes, Heart, Sleep)",
-      "SQL Queries (KPIs & Reports)",
-      "Power BI & Machine Learning Insights"
-    ]
+      "Healthcare CSV Datasets",
+      "Python ETL Pipeline",
+      "PostgreSQL DB",
+      "SQL KPI Analysis",
+      "Power BI & ML Insights"
+    ],
+    screenshot: null
   }
 ];
